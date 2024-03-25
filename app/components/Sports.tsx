@@ -139,23 +139,7 @@ export default function Sports() {
             </div>
           </div>
         </div>
-        <div className="shadow-[0px_4px_8px_0px_rgba(0,0,0,0.05)] bg-[#FFFFFF] relative flex flex-col items-center p-[10px_10.1px_52px_10.1px] w-[238.5px] box-sizing-border">
-          <div className="border-[0.2px_solid_#006555] bg-[#FFFFFF] absolute left-[10.1px] top-[10px] w-[218.4px] h-[491px]">
-          </div>
-          <div className="bg-[url('https://fn12.com/api/clusters/cluster-fn12-prod-asia-southeast1/projects/SmiywNrDWtpeoyNUQYzATu/assets/images/c724731ef71497e0e3af85c77fa47046bb1f23cb?Expires=1711888365&KeyName=fn12-cdn&Signature=g8ru4obtJHKrbd3qUA4GJulTxDw=')_50%_/_cover_no-repeat] relative m-[0_0_28px_0] flex flex-row justify-end w-[fit-content] h-[218px] box-sizing-border">
-            <div className="bg-[#000000] flex flex-row justify-center p-[3px_15.9px_3px_15px] box-sizing-border">
-              <span className="break-words font-['Inter'] font-bold text-[12.8px] leading-[1.484] text-[#FFFFFF]">
-                Ad
-              </span>
-            </div>
-          </div>
-          <div className="relative m-[0_2px_8px_0] inline-block break-words font-['Inter'] font-semibold text-[20px] text-[#222D3A]">
-            Advertisement title
-          </div>
-          <span className="relative m-[0_4.7px_0_0] break-words font-['Inter'] font-normal text-[12.8px] leading-[1.484] text-[#525965]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </span>
-        </div>
+        
       </div>
       <div className="shadow-[0px_4px_8px_0px_rgba(0,0,0,0.05)] rounded-[3px] bg-[#2C9CF0] m-[0_0_0_1px] flex flex-row justify-center self-center p-[10px_0.9px_10px_0] w-[124.8px] box-sizing-border">
         <span className="break-words font-['Inter'] font-semibold text-[14px] leading-[1.849] text-[#FFFFFF]">
