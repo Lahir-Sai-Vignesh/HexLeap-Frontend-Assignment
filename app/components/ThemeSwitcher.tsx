@@ -1,54 +1,35 @@
-"use client"
-import React,{useEffect,useState} from 'react';
+'use client'
 import {FaMoon} from "react-icons/fa";
 import { BsSunFill } from 'react-icons/bs';
+import { useState, useEffect } from 'react'
+import { useTheme } from 'next-themes'
+import Image from "next/image"
 
-function ThemeSwitcher() {
+export default function ThemeSwitch() {
+  const [mounted, setMounted] = useState(false)
+  const { setTheme, resolvedTheme } = useTheme()
 
-  const [darkMode,setDarkMode] = useState(true)
+  useEffect(() =>  setMounted(true), [])
 
-  useEffect(()=>{
-    const theme = localStorage.getItem("theme")
-    if ( theme === "dark")
-    {
-      setDarkMode(true)
-    }
-  },[]);
-
-  useEffect(()=>{
-    if (darkMode){
-      document.documentElement.classList.add('dark')
-      localStorage.setItem("theme","dark")
-    }
-    else{
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem("theme","light")
-    }
-  },[darkMode]);
-
-  return (
-    <div
-         className='relative w-16 h-8 flex items-center
-                    dark: bg-gray-900  cursor-pointer
-                    rounded-full p-1'
-         onClick={() => setDarkMode(!darkMode)}
-    >
-      <FaMoon className='text-white' size={18}/>
-
-      <div
-           className='absolute bg-white dark:bg-slate-600
-                      w-6 h-6 rounded-full shadow-md transform
-                      transition-transform duration-300' 
-           style={darkMode?{left:"2px"} :{right:"2px"}}   
-      >
-      </div>
-
-      <BsSunFill 
-                className='ml-auto text-yellow-400'
-                size={18}
-      />
-    </div>
+  if (!mounted) return (
+    <Image
+      src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
+      width={36}
+      height={36}
+      sizes="36x36"
+      alt="Loading Light/Dark Toggle"
+      priority={false}
+      title="Loading Light/Dark Toggle"
+    />
   )
-}
 
-export default ThemeSwitcher
+
+  if (resolvedTheme === 'dark') {
+    return <FaMoon className='text-white' size={25} onClick={() => setTheme('light')} />
+  }
+
+  if (resolvedTheme === 'light') {
+    return <BsSunFill  className='ml-auto text-yellow-400' size={25} onClick={() => setTheme('dark')}  />
+  }
+
+}
