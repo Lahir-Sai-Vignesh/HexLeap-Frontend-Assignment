@@ -17,7 +17,7 @@ function Ticket(props:TicketData) {
           <img src={props.img} className='w-[226.1px] h-[401.2px] shadow-[0px_8px_16px_0px_#00000033] '/>
         </div>
 
-         <div className="holes-lower dark:bg-[#3B3E47] relative h-[12px] border-t-[1px] border-dashed border-[#aaa]
+         <div className="dark:bg-[#3B3E47] relative h-[12px] border-t-[1px] border-dashed border-[#aaa]
                          before:content='' before:absolute before:h-[20px] before:w-[20px] before:rounded-full before:bg-[#e2e3e6] 
                          before:dark:bg-[#252f3c] before:top-[-9px] before:left-[-11px]
                          after:absolute after:h-[20px] after:w-[20px] after:rounded-full after:bg-[#e2e3e6] after:dark:bg-[#252f3c]
