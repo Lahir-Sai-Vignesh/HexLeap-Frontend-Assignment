@@ -8,7 +8,7 @@ function SportsPage() {
     <div>
         {/* {heading} */}
         
-        <div className="mb-[20px] inline-block leading-9 font-bold text-[24px] text-[#000000] border-b-2 border-[#738FFF]">
+        <div className="mb-[20px] inline-block leading-9 font-bold text-[24px] text-[#000000] border-b-2 border-[#738FFF] dark:text-white">
           Sports
         </div>
         {/* teamcards ,adv and seemore */}
