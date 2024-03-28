@@ -1,5 +1,6 @@
 import React from 'react'
-// import "./ticketstyle.css";
+import { Poppins } from 'next/font/google'
+
 type TicketData ={
   img : string,
   name : string,
@@ -9,6 +10,11 @@ type TicketData ={
   venue : string,
   buttonText : string
 }
+
+const poppins =Poppins({
+  weight:"500",
+  subsets: ['latin']
+});
 
 function Ticket(props:TicketData) {
   return (
@@ -26,7 +32,7 @@ function Ticket(props:TicketData) {
           </div>
 
         <div className='relative flex flex-col items-center justify-center bg-[#F7F7F8] w-[226px] dark:bg-[#3B3E47]'> 
-            <div className='font-[500] text-[17px] leading-[26.52px] m-0 capitalize dark:text-white'>{props.name}</div>
+            <div className={`${poppins.className} font-[500]  text-[17px] leading-[26.52px] m-0 capitalize dark:text-white font-poppins`}>{props.name}</div>
             <div className='font-[400] text-[14px] leading-[21px] m-1 dark:text-white'>{props.date} | {props.day} | {props.time}</div>
             <p className='text-center font-sans font-[400] text-[13px] leading-[20.58px] text-[#525965] capitalize dark:text-[#DFDFDF]'>{props.venue}</p>
             <button className='bg-black text-white font-[500] text-[12.73px] leading-[15.41px] m-[10px] p-[10px_35px] capitalize'>{props.buttonText}</button>
